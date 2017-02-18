@@ -9,8 +9,9 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico" rel="stylesheet">  <!-- JQuery -->
-  <script src="assets/javascript/game.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Elsie+Swash+Caps|Emblema+One|Inconsolata" rel="stylesheet"> <script src="assets/javascript/game.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
@@ -41,18 +42,25 @@
 	 	}
 
 	 	h1{
-	 		font-family: 'Dancing Script', cursive;
-	 		font-size: 90px;
-	 		letter-spacing: .2em;
+	 		font-family: 'Elsie Swash Caps', cursive;
+	 		font-size: 110px;
+	 		letter-spacing: 0em;
 	 		text-align: center;
 	 	}
 
+
+		#note {
+			font-family: 'Inconsolata', monospace;
+			font-size: 35px;
+
+		}
 	</style>
 
 	 <div class="container">
-			<div class="jumbotron" style="padding: 10px, background-color: white;">
-			  <p style="text-align: left" >Notable instances of</p><h1>Mercy!</h1>
-			  <p style="text-align: right">throughout history</p>
+			<div class="jumbotron" style="padding: 0px, background-color: white;">
+			  <p style="text-align: left" ></p>
+			  <h1>Mercy!</h1>
+			  <p id="note" style="text-align: right">notable instances of mercy throughout history</p>
 			  <p><a class="btn btn-primary btn-lg" id="comeon" href="#" role="button">Learn more</a></p>
 			</div>
  
@@ -104,13 +112,15 @@
 
 
 <!-- Split button -->
+<div class="container">
 <div class="btn-group">
   <button id="peauntb" class="btn btn-info btn-lg" href="#" role="button">A street dog</button>
    <a  id="jBtn" class="btn btn-default btn-lg" href="#" role="button">A backstabbing friend</a>
     <a id="merBtn" class="btn btn-info btn-lg" href="#" role="button">Infirmed locals</a>
-   <button id="karBtn" class="btn btn-default btn-lg" href="#" role="button">The jerk sensei</button>
+   <button id="karBtn" class="btn btn-default btn-lg" href="#" role="button">The sensei bully </button>
    <button id="ganBtn" class="btn btn-info btn-lg" href="#" role="button">Spear-chunking enemy</button>
 
+ </div>
  </div>
 
 <br>
@@ -125,8 +135,8 @@
 			    <div class="thumbnail">
 			      <img src="assets/images/miyagifight.jpg" alt="...">
 			      <div class="caption">
-			        <h3>Thumbnail label</h3>
-			        <p>...</p>
+			        <h3>Mercy from::</h3>
+			        <p>Guess who</p>
 			        <p><a href="#" id="herehere" class="btn btn-primary" role="button">Get the Word!</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
 			      </div>
 			    </div>
@@ -139,14 +149,14 @@
 <br>   <!--all this right box  for GUESSES-->
 
 			<div class="well well-lg" style="margin-left: 40px">
-			...
+			 
 
 
 			<p id="pPara"></p><p id="jPara"></p><p id="merPara"></p><p id="karPara"></p><p id="ganPara"></p>
 
 
 
-			<p id="blanks">hi</p>
+			<p id="blanks">Press a letter to start!</p>
 			<p id="myID">--</p>
 			<p id="userLetter">--</p>
 </div>
@@ -157,14 +167,14 @@
 
 	 </div> <!--for container image-->
 
-
+<div class="container">
  <div class="well well-lg">
 	<h2>Guesses</h2>
 	<p id="Guesses"></p>
 	<p id="letters"></p>
 
  </div>
-
+</div>
 
 	 </div> <!--contaner end-->
 

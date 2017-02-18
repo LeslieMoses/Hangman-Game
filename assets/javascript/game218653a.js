@@ -5,13 +5,11 @@
  
       //if("MISTER PEANUT")
 
-	var words = ["MISTER PEANUT", "CAMPFIRE BREAKFAST", "MR MIYAGI", "MERCY BOULEVARD"];
+	var words = ["MISTER PEANUT", "CAMPFIRE BREAKFAST", "KESUKE MIYAGI", "MERCY BOULEVARD"];
 	var pNut = ["MISTER PEANUT",];
 	var pNutLetters = ["M", "I", "S", "T", "E", "R", "P","E","A","N","U","T"];
-  var karate = ["MR MIYAGI"];
-  var karateLetters = ["M", "R", "M", "I", "Y", "A", "G","I"];
 	 
- var blanks = ["_ _ _ _ _ _  &nbsp;  _ _ _ _ _ _", "_ _ _ _ _ _ _ _ &nbsp;  _ _ _ _ _ _ _ _ _", "_ _   &nbsp;  _ _ _ _ _ _"];
+ var blanks = ["_ _ _ _ _ _  &nbsp;  _ _ _ _ _ _", "_ _ _ _ _ _ _ _ &nbsp;  _ _ _ _ _ _ _ _ _"];
 	var blankP = "_ _ _ _ _ _  &nbsp;  _ _ _ _ _ _";
 var alpha = [
 "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
@@ -25,7 +23,7 @@ var alpha = [
 	document.onkeyup = function(event) {
      // Determines which key was pressed
                 	 
-        		document.getElementById("pPara").innerHTML = blanks[2]; 
+        		document.getElementById("pPara").innerHTML = blanks[0]; 
          	
 				var userGuess = event.key;
                 var letterGuess = userGuess.toUpperCase();
@@ -33,35 +31,21 @@ var alpha = [
   document.getElementById("blanks").innerHTML = letterGuess;
 
 
-  if (karate.indexOf(karateLetters) === -1) {
-    Guesses--;
-  document.getElementById("Guesses").innerHTML = Guesses;
-  document.getElementById("letters").innerHTML = letterGuess;
-
-   }
- else if ( karate.indexOf(Guesses) > -1) {
-    document.getElementById("pPara").innerHTML = "_ _ _ _ _ _  &nbsp;  _ _ A _ _ _"; }
-}
-  //if (karateLetters.indexOf(letterGuess) === -1){
- // 	Guesses--;
-
+  if (pNutLetters.indexOf(letterGuess) === -1){
+  	Guesses--;
   	
-  //	document.getElementById("Guesses").innerHTML = Guesses;
-//	document.getElementById("letters").innerHTML = letterGuess;
- //     Guesses.push(letterGuess);
- // } else if ( karate.indexOf(Guesses) > -1) {
- //   document.getElementById("pPara").innerHTML = "_ _ _ _ _ _  &nbsp;  _ _ A _ _ _"; }
+  	document.getElementById("Guesses").innerHTML = Guesses;
+	document.getElementById("letters").innerHTML = letterGuess;
 
-
+  } else if ( letterGuess === "A"){
+    document.getElementById("pPara").innerHTML = "_ _ _ _ _ _  &nbsp;  _ _ A _ _ _"; }
   	//var stringReplace =  
   //	string.replace(blankP, "_ _ _ _ _ _  &nbsp;  _ _ A _ _ _");
   		 
 
- 
+}
  
   		 
-  //  else if ( letterGuess === "A"){
-   // document.getElementById("pPara").innerHTML = "_ _ _ _ _ _  &nbsp;  _ _ A _ _ _"; }
 		
                   
   //replace(blanks[0], "_ _ _ _ _ _  &nbsp;  _ _ A _ _ _");

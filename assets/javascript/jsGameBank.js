@@ -271,10 +271,21 @@ alert("it's a");
                   
 
 
-  
+  ---------------------SAT:
+
+  if (karateLetters.indexOf(letterGuess) === -1){
+    Guesses--;
+
+    
+    document.getElementById("Guesses").innerHTML = Guesses;
+  document.getElementById("letters").innerHTML = letterGuess;
+      Guesses.push(letterGuess);
+  } else if ( karate.indexOf(Guesses) > -1) {
+    document.getElementById("pPara").innerHTML = "_ _ _ _ _ _  &nbsp;  _ _ A _ _ _"; }
 
 
 
+--------------------------
 
 
  
@@ -321,3 +332,23 @@ function myFunction() {
 			    var res = filledA.replace(blanks[0], "_ _ _ _ _ _  &nbsp;  _ _ A _ _ _");
 			    document.getElementById("pPara").innerHTML = res}
 }
+
+
+document.onkeyup = function(event) {
+
+        alert("Lemme get you a word...");
+    
+      document.getElementById("myID").innerHTML = ("hi"); 
+
+
+
+          // Determines which key was pressed
+                 userGuess = event.key;
+                  var userGuessUpper = userGuess.toUpperCase();
+
+              document.getElementById("userLetter").innerHTML = userGuessUpper;
+
+              if ("MISTER PEANUT".indexOf(userGuessUpper) === -1){
+                alert("nope") 
+              }
+               
