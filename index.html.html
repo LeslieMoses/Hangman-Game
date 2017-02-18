@@ -2,14 +2,174 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Hangman</title>
+	  <!-- Bootstrap File -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico" rel="stylesheet">  <!-- JQuery -->
+  <script src="assets/javascript/game.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
-<script src="assets/javascript/game.js"></script> >
-</script>
-	
-	<p id="myID"></p>
+	<style>
 
-	<p><input id="scriptBox" type="text" onkeypress="return.runScript" /></p>
+		body{
+			background-image: url(assets/images/21ae7tgpjte-sweet-ice-cream-photography.jpg);
+		    padding:50px;
+		}
+		.blanks {
+			font-size: 22px;
+			color: skyblue;
+			}
+	 
+
+	 	.letters {
+	 		letter-spacing: 1em;
+	 		font-size: 22px;
+	 		color:black;
+	 	}
+
+	 	#pPara {
+
+			letter-spacing: .4em;
+	 		font-size: 22px;
+	 		color:black;
+	 	}
+
+	 	h1{
+	 		font-family: 'Dancing Script', cursive;
+	 		font-size: 90px;
+	 		letter-spacing: .2em;
+	 		text-align: center;
+	 	}
+
+	</style>
+
+	 <div class="container">
+			<div class="jumbotron" style="padding: 10px, background-color: white;">
+			  <p style="text-align: left" >Notable instances of</p><h1>Mercy!</h1>
+			  <p style="text-align: right">throughout history</p>
+			  <p><a class="btn btn-primary btn-lg" id="comeon" href="#" role="button">Learn more</a></p>
+			</div>
+ 
+		<div class="well2 well-md">Click a button to start! </div>
+
+
+</div>
+
+ <!-- Optional theme 
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  pea
+</button>
+<div class="collapse" id="collapseExample">
+  <div class="well">
+   <div>asdfasdfjaskdfjlaksdjflaskdjfalskdjf;sdfasdfjaskdfjlaksdjflaskdjfalskdjf;askldjflask;dfjsdfasdfjaskdfjlaksdjflaskdjfalskdjf;askldjflask;dfjsdfasdfjaskdfjlaksdjflaskdjfalskdjf;askldjflask;dfjsdfasdfjaskdfjlaksdjflaskdjfalskdjflask;dfjkl</div>
+  </div>
+</div>
+
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  fire
+</button>
+<div class="collapse" id="collapseExample">
+  <div class="well">
+   <div>asdfasdfjaskdfjlaksdjflaskdjfalskdjf;sdfasdfjaskdfjlaksdjflaskdjfalskdjf;askldjflask;dfjsdfasdfjaskdfjlaksdjflaskdjfalskdjf;askldjflask;dfjsdfasdfjaskdfjlaksdjflaskdjfalskdjf;askldjflask;dfjsdfasdfjaskdfjlaksdjflaskdjfalskdjflask;dfjkl</div>
+  </div>
+</div>
+
+
+
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  hosp
+</button>
+<div class="collapse" id="collapseExample">
+  <div class="well">
+   <div>asdfasdfjaskdfjlaksdjflaskdjfalskdjf;sdfasdfjaskdfjlaksdjflaskdjfalskdjf;askldjflask;dfjsdfasdfjaskdfjlaksdjflaskdjfalskdjf;askldjflask;dfjsdfasdfjaskdfjlaksdjflaskdjfalskdjf;askldjflask;dfjsdfasdfjaskdfjlaksdjflaskdjfalskdjflask;dfjkl</div>
+  </div>
+</div>
+
+
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  Live or die
+</button>
+<div class="collapse" id="collapseExample">
+  <div class="well">
+   <div>asdfasdfjaskdfjlaksdjflaskdjfalskdjf;sdfasdfjaskdfjlaksdjflaskdjfalskdjf;askldjflask;dfjsdfasdfjaskdfjlaksdjflaskdjfalskdjf;askldjflask;dfjsdfasdfjaskdfjlaksdjflaskdjfalskdjf;askldjflask;dfjsdfasdfjaskdfjlaksdjflaskdjfalskdjflask;dfjkl</div>
+  </div>
+</div>
+<!--d -->
+
+
+<!-- Split button -->
+<div class="btn-group">
+  <button id="peauntb" class="btn btn-info btn-lg" href="#" role="button">A street dog</button>
+   <a  id="jBtn" class="btn btn-default btn-lg" href="#" role="button">A backstabbing friend</a>
+    <a id="merBtn" class="btn btn-info btn-lg" href="#" role="button">Infirmed locals</a>
+   <button id="karBtn" class="btn btn-default btn-lg" href="#" role="button">The jerk sensei</button>
+   <button id="ganBtn" class="btn btn-info btn-lg" href="#" role="button">Spear-chunking enemy</button>
+
+ </div>
+
+<br>
+<br>
+<br>
+<br>
+	 <div class="container">
+ 
+  
+
+			  <div class="col-sm-12 col-lg-6">
+			    <div class="thumbnail">
+			      <img src="assets/images/miyagifight.jpg" alt="...">
+			      <div class="caption">
+			        <h3>Thumbnail label</h3>
+			        <p>...</p>
+			        <p><a href="#" id="herehere" class="btn btn-primary" role="button">Get the Word!</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+			      </div>
+			    </div>
+			  </div>
+
+
+			<div class="col-sm-12 col-lg-6 blanks">
+<br>
+<br>
+<br>   <!--all this right box  for GUESSES-->
+
+			<div class="well well-lg" style="margin-left: 40px">
+			...
+
+
+			<p id="pPara"></p><p id="jPara"></p><p id="merPara"></p><p id="karPara"></p><p id="ganPara"></p>
+
+
+
+			<p id="blanks">hi</p>
+			<p id="myID">--</p>
+			<p id="userLetter">--</p>
+</div>
+   </div> <!--END <div class="row">-->
+
+
+
+
+	 </div> <!--for container image-->
+
+
+ <div class="well well-lg">
+	<h2>Guesses</h2>
+	<p id="Guesses"></p>
+	<p id="letters"></p>
+
+ </div>
+
+
+	 </div> <!--contaner end-->
+
 </body>
 </html>
+
+<!--	<p><input id="scriptBox" type="text" onkeypress="return.runScript"/></p>
+-->
